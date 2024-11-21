@@ -155,6 +155,41 @@ header {
     color: #ccc;
 }
 
+/* Card Layout */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    color: #ff7f50;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
 /* Form Styles */
 form {
     max-width: 600px;
@@ -301,6 +336,12 @@ footer p {
     }
 
     .reviews form .rating-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Card layout on smaller screens */
+    .card-container {
         flex-direction: column;
         align-items: center;
     }
