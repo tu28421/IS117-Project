@@ -1,29 +1,52 @@
-/* Reviews Page Styles */
-body.reviews {
-    background-color: #fff3e0; /* Light peach background */
-    color: #5d4037; /* Brown text color */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Review</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
 
-body.reviews .hero {
-    background-color: #f57c00; /* Orange background */
-    color: #ffffff; /* White text */
-}
+    <header>
+        <h1>Leave a Review</h1>
+    </header>
 
-body.reviews h1 {
-    font-size: 3rem;
-    color: #ffffff; /* White text */
-}
+    <main>
+        <section>
+            <form action="#" method="POST">
+                <label for="rating">Rating:</label><br>
+                <input type="radio" id="1star" name="rating" value="1">
+                <label for="1star">1 Star</label>
+                <input type="radio" id="2stars" name="rating" value="2">
+                <label for="2stars">2 Stars</label>
+                <input type="radio" id="3stars" name="rating" value="3">
+                <label for="3stars">3 Stars</label>
+                <input type="radio" id="4stars" name="rating" value="4">
+                <label for="4stars">4 Stars</label>
+                <input type="radio" id="5stars" name="rating" value="5">
+                <label for="5stars">5 Stars</label><br><br>
 
-body.reviews .reviews {
-    background-color: #ffffff; /* White background for reviews */
-    padding: 40px;
-    border-radius: 10px;
-    max-width: 800px;
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+                <label for="reviewMessage">Message:</label><br>
+                <textarea id="reviewMessage" name="reviewMessage" rows="4" cols="50" required></textarea><br><br>
 
-body.reviews .reviews h2 {
-    color: #f57c00;
-    font-size: 2rem;
-}
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
