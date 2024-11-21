@@ -52,6 +52,7 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
+    position: relative; /* Required for dropdown positioning */
 }
 
 nav ul li a {
@@ -69,6 +70,40 @@ nav ul li a:hover {
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul li ul {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    min-width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+}
+
+nav ul li ul li {
+    margin: 0;
+}
+
+nav ul li ul li a {
+    padding: 12px 20px;
+    color: #fff;
+    text-transform: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li ul li a:hover {
+    background-color: #ff7f50;
 }
 
 /* Hero Section */
