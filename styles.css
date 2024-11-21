@@ -8,19 +8,39 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #fffbf1;
-    color: #333;
+    background-image: url('images/IS117pic.jpg'); /* Path to the image */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     height: 100vh;
+}
+
+/* Make the navigation and content area stand out */
+main {
+    min-height: 70vh;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    margin-top: 30px;
+    border-radius: 10px;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #3498db; /* Bright blue background */
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 4px solid #ff6347; /* Tomato red for bottom border */
+    border-bottom: 4px solid #ff7f50;
 }
 
 nav ul {
@@ -32,13 +52,12 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
-    position: relative; /* Needed for dropdown positioning */
 }
 
 nav ul li a {
     font-size: 18px;
     text-transform: uppercase;
-    color: white;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 30px;
     transition: all 0.3s ease;
@@ -46,46 +65,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #ff6347; /* Tomato red on hover */
-    color: white;
+    background-color: #ff7f50;
+    color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.1);
-}
-
-/* Dropdown Menu */
-nav ul li.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%; /* Position dropdown below parent item */
-    left: 0;
-    background-color: #3498db; /* Same as nav bar */
-    min-width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    list-style: none;
-    padding: 10px 0;
-}
-
-.dropdown-menu li {
-    margin: 0;
-}
-
-.dropdown-menu li a {
-    padding: 10px 20px;
-    color: white;
-    font-size: 16px;
-    font-weight: normal;
-    display: block;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #ff6347; /* Tomato red on hover for dropdown */
 }
 
 /* Hero Section */
@@ -97,7 +80,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('images/IS117pic.jpg') no-repeat center center/cover;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay on the background image */
     color: white;
 }
 
@@ -105,7 +88,7 @@ header {
     font-size: 4rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #ff6347;
+    color: #ff7f50;
 }
 
 .hero p {
@@ -116,4 +99,137 @@ header {
     font-weight: 300;
 }
 
-/* Additional sections, styling, and other code remains unchanged */
+/* About Section */
+.about {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff7f50;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: 1px solid #ff7f50;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    transition: border 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #ff7f50;
+    outline: none;
+}
+
+form button {
+    padding: 12px 25px;
+    background-color: #ff7f50;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Rating Styles (For Reviews Page) */
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    color: #ff7f50;
+}
+
+input[type="radio"]:not(:checked) + label:hover {
+    color: #e67e22;
+}
+
+/* Footer */
+footer p {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Page-Specific Backgrounds */
+.donate {
+    background-color: #e0f7fa;
+}
+
+.reviews {
+    background-color: #fff3e0;
+}
+
+.contact {
+    background-color: #f1f8e9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
