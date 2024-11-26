@@ -1,6 +1,3 @@
-STYLE CSS
-
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,14 +7,13 @@ STYLE CSS
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-image: url('images/IS117pic.jpg'); /* Path to the image */
+    background-image: url('images/IS117pic.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
     height: 100vh;
 }
 
-/* Make the navigation and content area stand out */
 main {
     min-height: 70vh;
     background: rgba(0, 0, 0, 0.5);
@@ -35,7 +31,6 @@ footer {
     border-radius: 10px;
 }
 
-/* Navigation Bar */
 nav {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 15px 0;
@@ -54,7 +49,7 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
-    position: relative; /* Required for dropdown positioning */
+    position: relative; 
 }
 
 nav ul li a {
@@ -74,13 +69,12 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-/* Dropdown Menu */
 nav ul li:hover > ul {
     display: block;
 }
 
 nav ul li ul {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -108,7 +102,6 @@ nav ul li ul li a:hover {
     background-color: #ff7f50;
 }
 
-/* Hero Section */
 header {
     position: relative;
     height: 100vh;
@@ -117,7 +110,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay on the background image */
+    background: rgba(0, 0, 0, 0.5); 
     color: white;
 }
 
@@ -136,7 +129,6 @@ header {
     font-weight: 300;
 }
 
-/* About Section */
 .about {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 40px;
@@ -157,7 +149,6 @@ header {
     color: #ccc;
 }
 
-/* Card Layout */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -167,36 +158,36 @@ header {
 }
 
 .card {
-    background: linear-gradient(145deg, rgba(255, 127, 80, 0.9), rgba(255, 165, 0, 0.8)); /* Gradient background */
-    border-radius: 15px; /* More rounded corners */
+    background: linear-gradient(145deg, rgba(255, 127, 80, 0.9), rgba(255, 165, 0, 0.8)); 
+    border-radius: 15px; 
     padding: 20px;
     width: 250px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    border: 2px solid #ff7f50; /* Add border */
+    border: 2px solid #ff7f50; 
 }
 
 .card:hover {
-    transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* More pronounced shadow */
-    background: linear-gradient(145deg, rgba(255, 127, 80, 1), rgba(255, 165, 0, 1)); /* Darker gradient on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    background: linear-gradient(145deg, rgba(255, 127, 80, 1), rgba(255, 165, 0, 1)); 
 }
 
 .card h3 {
-    color: white; /* White color for text */
+    color: white; 
     font-size: 1.8rem;
     margin-bottom: 10px;
-    font-weight: bold; /* Bold header */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle text shadow */
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
 }
 
 .card p {
-    color: #f5f5f5; /* Lighter text color */
+    color: #f5f5f5; 
     font-size: 1.1rem;
     margin-bottom: 15px;
     font-weight: 300;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Slight text shadow for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
 }
 
 .card a {
@@ -215,7 +206,6 @@ header {
     transform: scale(1.1);
 }
 
-
 .card h3 {
     color: #ff7f50;
     font-size: 1.8rem;
@@ -227,7 +217,6 @@ header {
     font-size: 1.1rem;
 }
 
-/* Form Styles */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -271,7 +260,6 @@ form button:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Rating Styles (For Reviews Page) */
 input[type="radio"] {
     display: none;
 }
@@ -290,9 +278,8 @@ input[type="radio"]:not(:checked) + label:hover {
     color: #e67e22;
 }
 
-/* Reviews Page Styling */
 .reviews form {
-    background-color: #fff3e0; /* Light orange background for the review form */
+    background-color: #fff3e0;
     border-radius: 10px;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -322,7 +309,6 @@ input[type="radio"]:not(:checked) + label:hover {
     color: #ff7f50;
 }
 
-/* Donate Form */
 .donate form {
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
@@ -363,13 +349,11 @@ input[type="radio"]:not(:checked) + label:hover {
     margin-bottom: 20px;
 }
 
-/* Footer */
 footer p {
     font-size: 1rem;
     color: #ccc;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -404,8 +388,7 @@ footer p {
         flex-direction: column;
         align-items: center;
     }
-
-    /* Card layout on smaller screens */
+    /* DEVELOPER Tanzeel ur Rehman, IS117-004=1, Fall 2024 */
     .card-container {
         flex-direction: column;
         align-items: center;
