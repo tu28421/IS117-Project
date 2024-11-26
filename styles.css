@@ -1,3 +1,5 @@
+STYLE CSS
+
 /* Global Styles */
 * {
     margin: 0;
@@ -157,18 +159,18 @@ header {
 
 /* Card Layout */
 .card-container {
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Centers the cards horizontally */
-    gap: 20px; /* Space between the cards */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin-top: 30px;
-    flex-wrap: wrap; /* Allows the cards to wrap on smaller screens */
 }
 
 .card {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     padding: 20px;
-    width: 250px; /* Adjust the width of the cards */
+    width: 250px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -320,8 +322,57 @@ input[type="radio"]:not(:checked) + label:hover {
     background-color: #e67e22;
 }
 
-/* Footer Styles */
+.donate form h3 {
+    color: #ff7f50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
 footer p {
-    color: white;
     font-size: 1rem;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .reviews form .rating-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Card layout on smaller screens */
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
