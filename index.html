@@ -21,9 +21,24 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Service</a></li> <!-- This will do nothing -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Service</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item prevent-click" href="#">Service 1</a></li>
+                                <li><a class="dropdown-item prevent-click" href="#">Service 2</a></li>
+                                <li><a class="dropdown-item prevent-click" href="#">Service 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li> <!-- This will do nothing -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Reviews</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item prevent-click" href="#">Review 1</a></li>
+                                <li><a class="dropdown-item prevent-click" href="#">Review 2</a></li>
+                                <li><a class="dropdown-item prevent-click" href="#">Review 3</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="donate.html">Donate</a></li>
                     </ul>
                 </div>
@@ -52,6 +67,7 @@
                     <!-- Card 1 -->
                     <div class="col-md-4">
                         <div class="card shadow-lg border-0 rounded">
+                            <img src="images/service1.jpg" class="card-img-top" alt="Service 1">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Outdoor Adventures</h5>
                                 <p class="card-text">Explore the great outdoors with us! Our expert guides take you on unforgettable journeys.</p>
@@ -65,6 +81,7 @@
                     <!-- Card 2 -->
                     <div class="col-md-4">
                         <div class="card shadow-lg border-0 rounded">
+                            <img src="images/service2.jpg" class="card-img-top" alt="Service 2">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Fitness Training</h5>
                                 <p class="card-text">Get fit for your next adventure. Our fitness programs are tailored to your goals.</p>
@@ -78,6 +95,7 @@
                     <!-- Card 3 -->
                     <div class="col-md-4">
                         <div class="card shadow-lg border-0 rounded">
+                            <img src="images/service3.jpg" class="card-img-top" alt="Service 3">
                             <div class="card-body">
                                 <h5 class="card-title text-center">Team Building</h5>
                                 <p class="card-text">Strengthen your team through outdoor challenges designed to build trust and leadership skills.</p>
@@ -102,19 +120,13 @@
     <!-- Bootstrap JS (Optional for interactive elements) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- JavaScript to prevent navigation on certain tabs -->
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navLinks = document.querySelectorAll('nav .nav-link');
-
-            navLinks.forEach(link => {
-                // For tabs with no content (i.e., href="#")
-                if (link.getAttribute('href') === '#') {
-                    link.addEventListener('click', function (e) {
-                        e.preventDefault(); // Prevent navigation
-                        return false; // Ensure the default action doesn't occur
-                    });
-                }
+        // Prevent default behavior for links with the class 'prevent-click'
+        const preventClickLinks = document.querySelectorAll('.prevent-click');
+        preventClickLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent the default action (i.e., page navigation)
+                console.log('This link does nothing'); // Optional: Log a message for debugging
             });
         });
     </script>
