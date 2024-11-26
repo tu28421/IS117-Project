@@ -156,12 +156,15 @@ header {
 }
 
 /* Card Layout */
-.card-container {
-    display: flex; /* Enables flexbox layout */
-    justify-content: center; /* Centers the cards horizontally */
-    gap: 20px; /* Space between the cards */
+.services {
     margin-top: 30px;
-    flex-wrap: wrap; /* Allows the cards to wrap on smaller screens */
+}
+
+.card-deck {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the cards */
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
 }
 
 .card {
@@ -179,7 +182,7 @@ header {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.card h3 {
+.card h5 {
     color: #ff7f50;
     font-size: 1.8rem;
     margin-bottom: 10px;
