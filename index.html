@@ -3,82 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summit Seekers</title>
-    
-    <!-- Add Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <title>Website</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add Bootstrap CDN for card layout -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Summit Seekers</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="service1.html">Service 1</a></li>
-                                <li><a class="dropdown-item" href="service2.html">Service 2</a></li>
-                                <li><a class="dropdown-item" href="service3.html">Service 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownReviews" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Reviews
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownReviews">
-                                <li><a class="dropdown-item" href="review1.html">Review 1</a></li>
-                                <li><a class="dropdown-item" href="review2.html">Review 2</a></li>
-                                <li><a class="dropdown-item" href="review3.html">Review 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="donate.html">Donate</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+   <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li>
+                <a href="service.html">Service</a>
+                <ul>
+                    <li><a href="service1.html">Service 1</a></li>
+                    <li><a href="service2.html">Service 2</a></li>
+                    <li><a href="service3.html">Service 3</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+                <a href="reviews.html">Reviews</a>
+                <ul>
+                    <li><a href="review1.html">Review 1</a></li>
+                    <li><a href="review2.html">Review 2</a></li>
+                    <li><a href="review3.html">Review 3</a></li>
+                </ul>
+            </li>
+            <li><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
 
-        <div class="hero text-center text-white" style="background-color: rgba(0, 0, 0, 0.5);">
-            <h1 class="display-4">SUMMIT SEEKERS</h1>
-            <p class="lead">LEG DAY BROUGHT TO YOU BY MOTHER NATURE!</p>
+        <div class="hero">
+            <h1>SUMMIT SEEKERS</h1>
+            <p>LEG DAY BROUGHT TO YOU BY MOTHER NATURE!</p>
         </div>
     </header>
 
-    <main class="container my-5">
+    <main>
         <section class="about">
             <h2>About Our Company</h2>
-            <p>Here is where you'll find information about our company, mission, and values. Our team is dedicated to inspiring outdoor adventures and helping you achieve your fitness goals with nature.</p>
+            <p>Here is where you'll find information about our company, mission, and values.</p>
         </section>
 
-        <!-- Additional content sections can go here -->
+        <!-- New Section for Cards -->
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="card-deck">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="images/service1.jpg" class="card-img-top" alt="Service 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Outdoor Adventures</h5>
+                        <p class="card-text">Explore the great outdoors with us! Our expert guides take you on unforgettable journeys.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="service1.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="images/service2.jpg" class="card-img-top" alt="Service 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Fitness Training</h5>
+                        <p class="card-text">Get fit for your next adventure. Our fitness programs are tailored to your goals.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="service2.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="images/service3.jpg" class="card-img-top" alt="Service 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Team Building</h5>
+                        <p class="card-text">Strengthen your team through outdoor challenges designed to build trust and leadership skills.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="service3.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </main>
 
-    <footer class="text-center py-4 bg-dark text-white">
+    <footer>
         <p>&copy; 2024 Summit Seekers. All rights reserved.</p>
     </footer>
 
-    <!-- Add Bootstrap JS -->
+    <!-- Bootstrap JS (Optional, for interactive elements like modals, carousels, etc.) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
